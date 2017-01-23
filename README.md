@@ -1,8 +1,8 @@
 # Introduction
 
-[![Travis](https://img.shields.io/travis/i18next/i18next-fetch-backend/master.svg?style=flat-square)](https://travis-ci.org/i18next/i18next-fetch-backend)
+[![Travis](https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square)](https://travis-ci.org/perrin4869/i18next-fetch-backend)
 [![npm version](https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square)](https://www.npmjs.com/package/i18next-fetch-backend)
-[![David](https://img.shields.io/david/i18next/i18next-fetch-backend.svg?style=flat-square)](https://david-dm.org/i18next/i18next-fetch-backend)
+[![David](https://img.shields.io/david/perrin4869/i18next-fetch-backend.svg?style=flat-square)](https://david-dm.org/perrin4869/i18next-fetch-backend)
 
 This is a simple i18next backend to be used in the browser. It will load resources from a backend server using the [fetch](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) API.
 
