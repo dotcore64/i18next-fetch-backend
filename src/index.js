@@ -1,4 +1,5 @@
 import XHRBackend from 'i18next-xhr-backend';
+import fetch from 'isomorphic-fetch';
 
 function ajax(url, { init = {} } = {}, cb) {
   fetch(url, init)
