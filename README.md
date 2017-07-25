@@ -102,7 +102,7 @@ let t = null;
 self.addEventListener('activate', (event) => {
   event.waitUntil(new Promise((resolve, reject) => {
     i18next
-      .use(FetchBackend)
+      .use(Fetch)
       .init({
         fallbackLng: ['ja', 'en', 'zh'],
         preload: ['ja', 'en', 'zh'],
