@@ -1,7 +1,6 @@
 # Introduction
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/perrin4869/i18next-fetch-backend.svg)](https://greenkeeper.io/)
-
 [![Travis](https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square)](https://travis-ci.org/perrin4869/i18next-fetch-backend)
 [![npm version](https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square)](https://www.npmjs.com/package/i18next-fetch-backend)
 [![David](https://img.shields.io/david/perrin4869/i18next-fetch-backend.svg?style=flat-square)](https://david-dm.org/perrin4869/i18next-fetch-backend)
