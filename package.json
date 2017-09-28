@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
     "build": "babel -d lib src",
-    "prepublish": "npm run lint && npm run build"
+    "prepare": "npm run lint && npm run build"
   },
   "files": [
     "lib"
