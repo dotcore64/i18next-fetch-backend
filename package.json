@@ -1,6 +1,6 @@
 {
   "name": "i18next-fetch-backend",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "backend layer for i18next using browsers fetch",
   "main": "lib/index.js",
   "scripts": {
