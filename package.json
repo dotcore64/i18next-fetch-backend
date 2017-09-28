@@ -27,13 +27,13 @@
   },
   "homepage": "https://github.com/perrin4869/i18next-fetch-backend#readme",
   "dependencies": {
-    "i18next-xhr-backend": "^1.3.0"
+    "i18next-xhr-backend": "^1.4.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-preset-es2015": "^6.22.0",
-    "eslint": "^3.14.0",
-    "eslint-config-airbnb-base": "^11.0.1",
-    "eslint-plugin-import": "^2.2.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.7.0"
   }
 }
