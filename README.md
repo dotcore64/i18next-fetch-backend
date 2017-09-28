@@ -125,3 +125,18 @@ self.addEventListener('activate', (event) => {
   }));
 });
 ```
+
+# IE \<= 10 Support
+
+Because of an [issue](https://github.com/babel/babel/issues/116) in how IE used to handle inheritance of static properties, the following is necessary in order to support the old browsers:
+
+```js
+import i18next from 'i18next';
+import FetchBackend from 'i18next-fetch-backend';
+
+FetchBackend.type = 'backend';
+
+i18next
+  .use(FetchBackend)
+  .init(/* ... */);
+```
