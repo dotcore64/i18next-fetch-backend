@@ -2,15 +2,16 @@
   "name": "i18next-fetch-backend",
   "version": "0.1.0",
   "description": "backend layer for i18next using browsers fetch",
-  "main": "lib/index.js",
+  "main": "dist/i18next-fetch-backend.cjs.js",
+  "module": "dist/i18next-fetch-backend.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
-    "build": "babel -d lib src",
+    "build": "rollup -c",
     "prepare": "npm run lint && npm run build"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -35,6 +36,10 @@
     "@babel/preset-env": "^7.1.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
   }
 }
