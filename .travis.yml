@@ -8,6 +8,7 @@ deploy:
     secure: kp9zugsY0x5MMmnVP/+fmqQaElXRDM8+Lu7Klf3r5dBBn4mE2a7p+A8mQAsKq1Qj6ujFEx4WDc2dF2ldl6PefVSAQuh9mi4BkFmBJFfqVk4ReIVOx/Ik9nX+8J/9hUgpXY9Fnt6uZgDb+pOVqIQjXR2uA7Qhk2JUohR3xn406XVsFv5fXplD9hou27O6E9UhmWepvPxZYbV/mtkI2U0AS3NjtO+/B0OEFkmb1fz2XVOjW6FFDE46GQsVc+RMunzygAKXtbjHQURXifM3JJ+M/z4iMDRbVOz33QNLIf+eXBeHt7+OmjR/QNgx7b7DMPNEafmLHA/oigMkTAy24Q+VCyLb1D/amJUYjwGupCUJnDGidS2NG5y4axTRFcvWWvDAvBUxbofXETjBdoPwcISH1j3mb36qFPfqwrQFREX9KkEWZMmT00mkkvcXjf4liAp+ELxGBSgJlLbnSBLeni37uizYx3gNz8GBEh80baNQz3bImIIyEMGaobT+TNc1zL54BD2caOkchRHCacMZPCSwg5a+IfAPj1ewm5gZ44YhDdn4CYSle6YNcy1DcK5A25MIMUV33pfzEEg10Ozb70f9j8EvkjCKbkgbkurYAhDSKbOyOc315BGPGlMzgBOzk0nPESnBugAlgSgnQC+x20pkbiIh9/xBGWLmgg3NoKyqHZY=
   email: julian@dotcore.co.il
   provider: npm
+  skip_cleanup: true # prevent having to rebuild all files
   on:
     tags: true
 script: npm run lint && npm run build
