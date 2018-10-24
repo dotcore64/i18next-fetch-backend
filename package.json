@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/perrin4869/i18next-fetch-backend#readme",
   "dependencies": {
-    "i18next-xhr-backend": "^1.4.3"
+    "i18next-xhr-backend": "^1.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
