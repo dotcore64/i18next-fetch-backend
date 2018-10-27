@@ -15,9 +15,6 @@ Source can be loaded via [npm](https://www.npmjs.com/package/i18next-fetch-backe
 ```
 # npm package
 $ npm install --save i18next-fetch-backend
-
-# bower
-$ bower install --save i18next-fetch-backend
 ```
 
 Wiring up:
