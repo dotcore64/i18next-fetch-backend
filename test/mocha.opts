@@ -1,0 +1,4 @@
+-R spec
+--require @babel/register
+--require isomorphic-fetch
+--ui bdd
