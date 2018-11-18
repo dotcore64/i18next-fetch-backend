@@ -1,9 +1,10 @@
 # Introduction
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/perrin4869/i18next-fetch-backend.svg?style=flat-square)](https://greenkeeper.io/)
-[![Travis](https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square)](https://travis-ci.org/perrin4869/i18next-fetch-backend)
-[![npm version](https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square)](https://www.npmjs.com/package/i18next-fetch-backend)
-[![David](https://img.shields.io/david/perrin4869/i18next-fetch-backend.svg?style=flat-square)](https://david-dm.org/perrin4869/i18next-fetch-backend)
+[![Travis][build-badge]][build]
+[![npm package][npm-badge]][npm]
+[![Coverage Status][coveralls-badge]][coveralls]
+[![Dependency Status][dependency-status-badge]][dependency-status]
+[![devDependency Status][dev-dependency-status-badge]][dev-dependency-status]
 
 This is a simple i18next backend to be used in the browser. It will load resources from a backend server using the [fetch](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) API.
 
@@ -141,3 +142,18 @@ i18next
   .use(FetchBackend)
   .init(/* ... */);
 ```
+
+[build-badge]: https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square
+[build]: https://travis-ci.org/perrin4869/i18next-fetch-backend
+
+[npm-badge]: https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/i18next-fetch-backend
+
+[coveralls-badge]: https://img.shields.io/coveralls/perrin4869/i18next-fetch-backend/master.svg?style=flat-square
+[coveralls]: https://coveralls.io/r/perrin4869/i18next-fetch-backend
+
+[dependency-status-badge]: https://david-dm.org/perrin4869/i18next-fetch-backend.svg?style=flat-square
+[dependency-status]: https://david-dm.org/perrin4869/i18next-fetch-backend
+
+[dev-dependency-status-badge]: https://david-dm.org/perrin4869/i18next-fetch-backend/dev-status.svg?style=flat-square
+[dev-dependency-status]: https://david-dm.org/perrin4869/i18next-fetch-backend#info=devDependencies

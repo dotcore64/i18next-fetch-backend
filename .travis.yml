@@ -12,3 +12,5 @@ deploy:
   on:
     tags: true
 script: npm run lint && npm run test && npm run build
+after_success:
+- npm run coveralls
