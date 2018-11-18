@@ -25,15 +25,13 @@ import i18next from 'i18next';
 import Fetch from 'i18next-fetch-backend';
 
 i18next
-  .use(fetch)
+  .use(Fetch)
   .init(i18nextOptions);
 ```
 
 - As with all modules you can either pass the constructor function (class) to the i18next.use or a concrete instance.
 
 ## Backend Options
-
-The same options supported by [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) are supported here, except for those used by `XMLHttpRequest`. Instead, you can provide an `init` option that will be provided to `fetch`, documented [here](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters).
 
 ```js
 {
@@ -51,15 +49,21 @@ The same options supported by [i18next-xhr-backend](https://github.com/i18next/i
   // here it removes the letter a from the json (bad idea)
   parse: function(data) { return data.replace(/a/g, ''); },
 
+  // your backend server supports multiloading
+  // /locales/resources.json?lng=de+en&ns=ns1+ns2
+  allowMultiLoading: false, // set loadPath: '/locales/resources.json?lng={{lng}}&ns={{ns}}' to adapt to multiLoading
+
+  multiSeparator: '+',
+
   // init option for fetch, for example
-  init: {
+  requestOptions: {
     mode: 'cors',
     credentials: 'same-origin',
     cache: 'default',
   },
 
   // define a custom fetch function
-  ajax: function (url, options, callback) {},
+  fetch: function (url, options, callback) {},
 }
 ```
 
@@ -126,21 +130,6 @@ self.addEventListener('activate', (event) => {
       });
   }));
 });
-```
-
-# IE \<= 10 Support
-
-Because of an [issue](https://github.com/babel/babel/issues/116) in how IE used to handle inheritance of static properties, the following is necessary in order to support the old browsers:
-
-```js
-import i18next from 'i18next';
-import FetchBackend from 'i18next-fetch-backend';
-
-FetchBackend.type = 'backend';
-
-i18next
-  .use(FetchBackend)
-  .init(/* ... */);
 ```
 
 [build-badge]: https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square
