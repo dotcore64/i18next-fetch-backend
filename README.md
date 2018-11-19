@@ -41,13 +41,16 @@ i18next
   // the returned path will interpolate lng, ns if provided like giving a static path
   loadPath: '/locales/{{lng}}/{{ns}}.json',
 
-  // path to post missing resources
-  addPath: 'locales/add/{{lng}}/{{ns}}',
-
   // parse data after it has been fetched
   // in example use https://www.npmjs.com/package/json5
   // here it removes the letter a from the json (bad idea)
   parse: function(data) { return data.replace(/a/g, ''); },
+
+  // path to post missing resources
+  addPath: 'locales/add/{{lng}}/{{ns}}',
+
+  // define how to stringify the data when adding missing resources
+  stringify: JSON.stringify,
 
   // your backend server supports multiloading
   // /locales/resources.json?lng=de+en&ns=ns1+ns2

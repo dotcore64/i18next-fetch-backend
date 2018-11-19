@@ -4,6 +4,7 @@ const defaults = {
   multiSeparator: '+',
   allowMultiLoading: false,
   parse: JSON.parse,
+  stringify: JSON.stringify,
   fetch,
   requestOptions: {},
 };
@@ -84,13 +85,19 @@ class Backend {
     };
 
     arrify(languages).forEach((lng) => {
-      const { addPath, requestOptions } = this.options;
+      const {
+        addPath,
+        requestOptions,
+        fetch,
+        stringify,
+      } = this.options;
+
       const url = this.services.interpolator.interpolate(addPath, { lng, ns: namespace });
 
       try {
-        this.options.fetch(url, {
+        fetch(url, {
           method: 'POST',
-          body: JSON.stringify(payload),
+          body: stringify(payload),
           ...requestOptions,
         });
       } catch (ex) {
