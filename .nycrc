@@ -1,7 +1,4 @@
 {
-  "extension": [
-    "jsx"
-  ],
   "sourceMap": false,
   "instrument": false
 }
