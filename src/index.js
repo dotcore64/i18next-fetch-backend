@@ -9,6 +9,7 @@ const defaults = {
 };
 
 const arrify = val => (Array.isArray(val) ? val : [val]);
+const normalize = (funcOrVal, ...args) => (typeof funcOrVal === 'function' ? funcOrVal(...args) : funcOrVal);
 
 class Backend {
   constructor(services, options) {
@@ -30,7 +31,7 @@ class Backend {
   }
 
   getLoadPath(languages, namespaces) {
-    return typeof this.options.loadPath === 'function' ? this.options.loadPath(languages, namespaces) : this.options.loadPath;
+    return normalize(this.options.loadPath, languages, namespaces);
   }
 
   read(language, namespace, callback) {
