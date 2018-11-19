@@ -1,6 +1,4 @@
 import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
 const input = 'src/index.js';
@@ -21,9 +19,5 @@ export default [{
 }, {
   input,
   output: { file: `dist/${pkg.name}.umd.js`, format: 'umd', name },
-  plugins: [
-    ...plugins,
-    resolve(),
-    commonjs({ include: /node_modules/ }),
-  ],
+  plugins,
 }];
