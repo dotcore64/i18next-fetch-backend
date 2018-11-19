@@ -9,15 +9,12 @@ const plugins = [
 ];
 
 const name = 'I18nextFetchBackend';
-const external = ['i18next-xhr-backend'];
 
 export default [{
-  external,
   input,
   output: { file: `dist/${pkg.name}.cjs.js`, format: 'cjs' },
   plugins,
 }, {
-  external,
   input,
   output: { file: `dist/${pkg.name}.esm.js`, format: 'esm' },
   plugins,
