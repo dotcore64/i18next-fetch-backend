@@ -69,6 +69,8 @@ class Backend {
         }
 
         return response.text();
+      }, () => {
+        return callback(`failed loading ${url}`, false);
       })
       .then((data) => {
         try {
