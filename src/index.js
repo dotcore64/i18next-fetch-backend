@@ -76,6 +76,12 @@ class Backend {
         } catch (e) {
           return callback(`failed parsing ${url} to json`, false);
         }
+      })
+      .catch(err => {
+        return callback(
+          `failed loading ${url}, encountered error ${err}`,
+          false
+        );
       });
   }
 
