@@ -60,46 +60,46 @@ describe('i18next-fetch-backend', () => {
         cb();
       },
     );
+  });
 
-    it('should fail to load non existent namespace translation', (cb) => {
-      const i18next = createInstance();
+  it('should fail to load non existent namespace translation', (cb) => {
+    const i18next = createInstance();
 
-      i18next.use(FetchBackend).init(
-        {
-          fallbackLng: 'en',
-          ns: 'mynamespace',
-          backend: {
-            loadPath: 'http://localhost:badport/{{lng}}/{{ns}}.json',
-          },
+    i18next.use(FetchBackend).init(
+      {
+        fallbackLng: 'en',
+        ns: 'mynamespace',
+        backend: {
+          loadPath: 'http://localhost:3000/{{lng}}/{{ns}}.json',
         },
-        (err) => {
-          expect(err).to.deep.equal([
-            'failed loading http://localhost:badport/en/mynamespace.json',
-          ]);
-          cb();
-        },
-      );
-    });
+      },
+      (err) => {
+        expect(err).to.deep.equal([
+          'failed loading http://localhost:3000/en/mynamespace.json',
+        ]);
+        cb();
+      },
+    );
+  });
 
-    it("should fail if the requested domain doesn't exist", (cb) => {
-      const i18next = createInstance();
+  it("should fail if the requested domain doesn't exist", (cb) => {
+    const i18next = createInstance();
 
-      i18next.use(FetchBackend).init(
-        {
-          fallbackLng: 'en',
-          ns: 'mynamespace',
-          backend: {
-            loadPath: 'http://localhost:3000/{{lng}}/{{ns}}.json',
-          },
+    i18next.use(FetchBackend).init(
+      {
+        fallbackLng: 'en',
+        ns: 'mynamespace',
+        backend: {
+          loadPath: 'http://localhost:badport/{{lng}}/{{ns}}.json',
         },
-        (err) => {
-          expect(err).to.deep.equal([
-            'failed loading http://localhost:3000/en/mynamespace.json',
-          ]);
+      },
+      (err) => {
+        expect(err).to.deep.equal([
+          'failed loading http://localhost:badport/en/mynamespace.json',
+        ]);
 
-          cb();
-        },
-      );
-    });
+        cb();
+      },
+    );
   });
 });
