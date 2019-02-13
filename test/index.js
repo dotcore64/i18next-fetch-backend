@@ -90,12 +90,12 @@ describe('i18next-fetch-backend', () => {
         fallbackLng: 'en',
         ns: 'mynamespace',
         backend: {
-          loadPath: 'http://localhost:badport/{{lng}}/{{ns}}.json',
+          loadPath: 'http://bad-localhost:3000/{{lng}}/{{ns}}.json',
         },
       },
       (err) => {
         expect(err).to.deep.equal([
-          'failed loading http://localhost:badport/en/mynamespace.json',
+          'failed loading http://bad-localhost:3000/en/mynamespace.json',
         ]);
 
         cb();
