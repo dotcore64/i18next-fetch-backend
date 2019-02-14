@@ -69,15 +69,16 @@ class Backend {
         }
 
         return response.text();
-      })
+      }, () => callback(`failed loading ${url}`, false))
       .then((data) => {
         try {
-          return callback(null, parse(data, url));
+          if (data) {
+            return callback(null, parse(data, url));
+          }
         } catch (e) {
           return callback(`failed parsing ${url} to json`, false);
         }
-      })
-      .catch(() => callback(`failed loading ${url}`, false));
+      });
   }
 
   create(languages, namespace, key, fallbackValue) {

@@ -82,6 +82,8 @@ describe('i18next-fetch-backend', () => {
     );
   });
 
+
+
   it("should fail if the requested domain doesn't exist", (cb) => {
     const i18next = createInstance();
 
@@ -101,5 +103,25 @@ describe('i18next-fetch-backend', () => {
         cb();
       },
     );
+  });
+
+  it('should call the callback with an error if the fetch fails.', (cb) => {
+    const i18next = createInstance();
+
+    i18next
+      .use(FetchBackend)
+      .init({
+        fallbackLng: 'en',
+        ns: 'translation',
+        backend: {
+          loadPath: 'http://localhost:3000/{{lng}}/{{ns}}.json',
+          // mock fetch with a function that returns a rejection of cancelled request
+          fetch: () => Promise.reject(new TypeError('cancelled'))
+        }
+      }, (err) => {
+        expect(err).to.deep.equal(['failed loading http://localhost:3000/en/translation.json']);
+
+        cb();
+      });
   });
 });
