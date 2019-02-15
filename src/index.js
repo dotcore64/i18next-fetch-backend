@@ -65,16 +65,19 @@ class Backend {
           let retry = false; // status codes 4xx
           if (status >= 500 && status < 600) retry = true;
 
-          return callback(`failed loading ${url}`, retry);
+          callback(`failed loading ${url}`, retry);
+          return null;
         }
 
         return response.text();
-      }, () => callback(`failed loading ${url}`, false))
+      }, () => {
+        callback(`failed loading ${url}`, null);
+        return null;
+      })
       .then((data) => {
+        if (data === null) return undefined;
         try {
-          if (data) {
-            return callback(null, parse(data, url));
-          }
+          return callback(null, parse(data, url));
         } catch (e) {
           return callback(`failed parsing ${url} to json`, false);
         }
