@@ -1,5 +1,0 @@
--R spec
---require env-test
---require @babel/register
---require isomorphic-fetch
---ui bdd
