@@ -12,6 +12,16 @@ const defaults = {
 const arrify = val => (Array.isArray(val) ? val : [val]);
 const normalize = (funcOrVal, ...args) => (typeof funcOrVal === 'function' ? funcOrVal(...args) : funcOrVal);
 
+class BackendError extends Error {
+  retry = null;
+
+  constructor(message, retry = false) {
+    super(message);
+
+    this.retry = retry;
+  }
+}
+
 class Backend {
   constructor(services, options) {
     this.init(services, options);
@@ -62,24 +72,25 @@ class Backend {
         const { ok, status } = response;
 
         if (!ok) {
-          let retry = false; // status codes 4xx
-          if (status >= 500 && status < 600) retry = true;
+          const retry = status >= 500 && status < 600; // don't retry for 4xx codes
 
-          callback(`failed loading ${url}`, retry);
-          return null;
+          throw new BackendError(`failed loading ${url}`, retry);
         }
 
         return response.text();
       }, () => {
-        callback(`failed loading ${url}`, null);
-        return null;
+        throw new BackendError(`failed loading ${url}`);
       })
       .then((data) => {
-        if (data === null) return undefined;
         try {
           return callback(null, parse(data, url));
         } catch (e) {
-          return callback(`failed parsing ${url} to json`, false);
+          throw new BackendError(`failed parsing ${url} to json`, false);
+        }
+      })
+      .catch((e) => {
+        if (e instanceof BackendError) {
+          callback(e.message, e.retry);
         }
       });
   }
