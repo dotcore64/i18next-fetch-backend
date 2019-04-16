@@ -48,7 +48,7 @@
     "i18next": "^15.0.4",
     "isomorphic-fetch": "^2.2.1",
     "mocha": "^6.0.0",
-    "nyc": "^13.3.0",
+    "nyc": "^14.0.0",
     "rollup": "^1.2.2",
     "rollup-plugin-babel": "^4.3.2",
     "serve-static": "^1.13.2"
