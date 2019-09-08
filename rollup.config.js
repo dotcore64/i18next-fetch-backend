@@ -2,9 +2,7 @@ import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
 
 const input = 'src/index.js';
-const plugins = [
-  babel({ exclude: '**/node_modules/**' }),
-];
+const plugins = [babel()];
 
 const name = 'I18nextFetchBackend';
 
