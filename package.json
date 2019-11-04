@@ -4,6 +4,7 @@
   "description": "backend layer for i18next using browsers fetch",
   "main": "dist/i18next-fetch-backend.cjs.js",
   "module": "dist/i18next-fetch-backend.esm.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "test": "mocha",
     "lint": "eslint src/",
@@ -13,7 +14,8 @@
     "prepare": "npm run lint && npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
