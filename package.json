@@ -48,7 +48,7 @@
     "finalhandler": "^1.1.1",
     "i18next": "^15.0.4",
     "isomorphic-fetch": "^2.2.1",
-    "mocha": "^6.0.0",
+    "mocha": "^7.0.1",
     "nyc": "^13.3.0",
     "rollup": "^1.2.2",
     "rollup-plugin-babel": "^4.3.2",
