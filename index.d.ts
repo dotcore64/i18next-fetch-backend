@@ -8,13 +8,21 @@ export interface FetchOptions {
   fetch: typeof fetch,
   parse: typeof JSON.parse,
   stringify: typeof JSON.stringify,
-  requestOptions: any,
+  requestOptions: RequestInit,
 }
-
+export class BackendError extends Error { }
 export default class I18nextFetchBackend implements BackendModule<FetchOptions> {
   type: 'backend';
+  static type: 'backend';
+  constructor(services: Services, options: FetchOptions);
   init(services: Services, backendOptions: FetchOptions, i18nextOptions: InitOptions): void;
-  read(language: string, namespace: string, callback: ReadCallback): void;
   create(languages: string[], namespace: string, key: string, fallbackValue: string): void;
+  /**
+   * @throws {BackendError} - If the fetch fails or the parsing the response to json fails.
+   */
+  read(language: string, namespace: string, callback: ReadCallback): void;
+  /**
+   * @throws {BackendError} - If the fetch fails or the parsing the response to json fails.
+   */
   readMulti(languages: string[], namespaces: string[], callback: ReadCallback): void;
 }
