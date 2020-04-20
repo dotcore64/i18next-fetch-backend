@@ -1,16 +1,20 @@
-declare module "i18next-fetch-backend" {
-    type FailureCallback = (errorMessage: string, retry: boolean) => void;
-    type SuccessCallback = (_: null, data: any) => any;
-    export default class Backend {
-        constructor(services: any, options: any);
-        type: 'backend';
-        static type: 'backend';
+import { BackendModule, Services, ReadCallback } from 'i18next';
 
-        init(services: any, options: any): void;
-        getLoadPath(languages: string, namespaces: string): string;
-        read(language: string, namespace: string, callback: Function): void;
-        readMulti(languages: string[], namespaces: string[], callback: Function): void;
-        loadUrl(url: string, callback: SuccessCallback | FailureCallback): void;
-        create(languages: string[], namespace: string, key: string, fallbackValue: string): void;
-    }
+export interface FetchOptions {
+  loadPath: string,
+  addPath: string,
+  multiSeparator: string,
+  allowMultiLoading: boolean,
+  fetch: typeof fetch,
+  parse: typeof JSON.parse,
+  stringify: typeof JSON.stringify,
+  requestOptions: any,
+}
+
+export default class I18nextFetchBackend implements BackendModule<FetchOptions> {
+  type: 'backend';
+  init(services: Services, backendOptions: FetchOptions, i18nextOptions: InitOptions): void;
+  read(language: string, namespace: string, callback: ReadCallback): void;
+  create(languages: string[], namespace: string, key: string, fallbackValue: string): void;
+  readMulti(languages: string[], namespaces: string[], callback: ReadCallback): void;
 }
