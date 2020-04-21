@@ -1,4 +1,4 @@
-import { BackendModule, Services, ReadCallback } from 'i18next';
+import { BackendModule, Services, ReadCallback, InitOptions } from 'i18next';
 
 export interface FetchOptions {
   loadPath: string,
