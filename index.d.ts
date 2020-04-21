@@ -11,7 +11,7 @@ export interface FetchOptions {
   requestOptions: RequestInit,
 }
 export class BackendError extends Error { }
-export default class I18nextFetchBackend implements BackendModule<FetchOptions> {
+export default class Backend implements BackendModule<FetchOptions> {
   type: 'backend';
   static type: 'backend';
   constructor(services: Services, options: FetchOptions);
