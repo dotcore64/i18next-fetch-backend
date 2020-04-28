@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perrin4869/i18next-fetch-backend.git"
+    "url": "git+https://github.com/dotcore64/i18next-fetch-backend.git"
   },
   "keywords": [
     "i18next",
@@ -28,9 +28,9 @@
   "author": "Julian Grinblat <julian@dotcore.co.il>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/perrin4869/i18next-fetch-backend/issues"
+    "url": "https://github.com/dotcore64/i18next-fetch-backend/issues"
   },
-  "homepage": "https://github.com/perrin4869/i18next-fetch-backend#readme",
+  "homepage": "https://github.com/dotcore64/i18next-fetch-backend#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",

@@ -135,17 +135,17 @@ self.addEventListener('activate', (event) => {
 });
 ```
 
-[build-badge]: https://img.shields.io/travis/perrin4869/i18next-fetch-backend/master.svg?style=flat-square
-[build]: https://travis-ci.org/perrin4869/i18next-fetch-backend
+[build-badge]: https://img.shields.io/travis/dotcore64/i18next-fetch-backend/master.svg?style=flat-square
+[build]: https://travis-ci.org/dotcore64/i18next-fetch-backend
 
 [npm-badge]: https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square
 [npm]: https://www.npmjs.org/package/i18next-fetch-backend
 
-[coveralls-badge]: https://img.shields.io/coveralls/perrin4869/i18next-fetch-backend/master.svg?style=flat-square
-[coveralls]: https://coveralls.io/r/perrin4869/i18next-fetch-backend
+[coveralls-badge]: https://img.shields.io/coveralls/dotcore64/i18next-fetch-backend/master.svg?style=flat-square
+[coveralls]: https://coveralls.io/r/dotcore64/i18next-fetch-backend
 
-[dependency-status-badge]: https://david-dm.org/perrin4869/i18next-fetch-backend.svg?style=flat-square
-[dependency-status]: https://david-dm.org/perrin4869/i18next-fetch-backend
+[dependency-status-badge]: https://david-dm.org/dotcore64/i18next-fetch-backend.svg?style=flat-square
+[dependency-status]: https://david-dm.org/dotcore64/i18next-fetch-backend
 
-[dev-dependency-status-badge]: https://david-dm.org/perrin4869/i18next-fetch-backend/dev-status.svg?style=flat-square
-[dev-dependency-status]: https://david-dm.org/perrin4869/i18next-fetch-backend#info=devDependencies
+[dev-dependency-status-badge]: https://david-dm.org/dotcore64/i18next-fetch-backend/dev-status.svg?style=flat-square
+[dev-dependency-status]: https://david-dm.org/dotcore64/i18next-fetch-backend#info=devDependencies
