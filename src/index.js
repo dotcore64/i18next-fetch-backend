@@ -9,7 +9,7 @@ const defaults = {
   requestOptions: {},
 };
 
-const arrify = val => (Array.isArray(val) ? val : [val]);
+const arrify = (val) => (Array.isArray(val) ? val : [val]);
 const normalize = (funcOrVal, ...args) => (typeof funcOrVal === 'function' ? funcOrVal(...args) : funcOrVal);
 
 class BackendError extends Error {
@@ -117,7 +117,7 @@ class Backend {
           ...requestOptions,
         });
       } catch (ex) {
-        console.error(ex);
+        console.error(ex); // eslint-disable-line no-console
       }
     });
   }

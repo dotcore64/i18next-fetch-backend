@@ -4,4 +4,7 @@ module.exports = {
   env: {
     browser: true,
   },
+  rules: {
+    'max-classes-per-file': 0,
+  },
 };
