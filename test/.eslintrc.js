@@ -4,4 +4,7 @@ module.exports = {
   env: {
     mocha: true,
   },
+  rules: {
+    "mocha/no-mocha-arrows": 0,
+  }
 };
