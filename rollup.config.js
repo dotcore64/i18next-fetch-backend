@@ -8,7 +8,8 @@ const name = 'I18nextFetchBackend';
 
 export default [{
   input,
-  output: { file: `dist/${pkg.name}.cjs.js`, format: 'cjs' },
+  // sourcemaps help generate coverage reports for the actual sources using istanbul
+  output: { file: `dist/${pkg.name}.cjs.js`, format: 'cjs', sourcemap: true },
   plugins,
 }, {
   input,

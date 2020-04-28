@@ -1,9 +1,9 @@
-module.exports = ({ env }) => ({
-  presets: [
-    ['@babel/env', env('test') ? { targets: { node: 'current' } } : {}],
-  ],
-  plugins: [
-    '@babel/proposal-class-properties',
-    env('test') && 'istanbul',
-  ].filter(Boolean),
-})
+module.exports = ({ env }) => env('test')
+  ? {
+    presets: [['@babel/env', { targets: { node: 'current' } }]],
+    plugins: ['istanbul'],
+  }
+  : {
+    presets: ['@babel/env'],
+    plugins: ['@babel/proposal-class-properties'],
+  };

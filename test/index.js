@@ -5,7 +5,7 @@ import serveStatic from 'serve-static';
 import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
-import FetchBackend from '../src';
+import FetchBackend from '..';
 
 const serve = serveStatic(join(__dirname, 'locales'));
 const server = createServer((req, res) => {
