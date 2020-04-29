@@ -2,10 +2,11 @@ import { createServer } from 'http';
 import { join } from 'path';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
-import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
 import FetchBackend from '..';
+
+const { createInstance } = require('i18next');
 
 const serve = serveStatic(join(__dirname, 'locales'));
 const server = createServer((req, res) => {

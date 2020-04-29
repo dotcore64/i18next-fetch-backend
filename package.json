@@ -49,6 +49,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-mocha": "^6.3.0",
+    "esm": "^3.2.25",
     "finalhandler": "^1.1.2",
     "i18next": "^19.4.4",
     "isomorphic-fetch": "^2.2.1",
