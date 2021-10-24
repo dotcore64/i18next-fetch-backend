@@ -1,7 +1,3 @@
-module.exports = ({ env }) => env('test')
-  ? {
-    plugins: ['istanbul'],
-  }
-  : {
-    presets: ['@babel/env', env('test') ? { target: { node: 'current' } } : {}],
-  };
+module.exports = ({ env }) => !env('test') && {
+    presets: ['@babel/env'],
+};
