@@ -1,3 +1,4 @@
 {
-  "extends": "@istanbuljs/nyc-config-babel"
+  "extends": "@istanbuljs/nyc-config-babel",
+  "reporter": "lcovonly"
 }
