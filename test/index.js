@@ -3,12 +3,12 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
-import i18next from 'i18next';
+import I18next from 'i18next';
 import { expect } from 'chai';
 
 import FetchBackend from '../src';
 
-const { createInstance } = i18next; // TODO: use named exports when available
+const { createInstance } = I18next; // TODO: use named exports when available
 
 const serve = serveStatic(join(dirname(fileURLToPath(import.meta.url)), 'locales'));
 const server = createServer((req, res) => {
