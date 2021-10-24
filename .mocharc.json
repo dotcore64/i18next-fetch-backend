@@ -1,0 +1,6 @@
+{
+  "reporter": "spec",
+  "ui": "bdd",
+  "experimental-specifier-resolution": "node",
+  "require": ["env-test", "@babel/register", "isomorphic-fetch"]
+}

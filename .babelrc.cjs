@@ -3,6 +3,5 @@ module.exports = ({ env }) => env('test')
     plugins: ['istanbul'],
   }
   : {
-    presets: ['@babel/env'],
-    plugins: ['@babel/proposal-class-properties'],
+    presets: ['@babel/env', env('test') ? { target: { node: 'current' } } : {}],
   };

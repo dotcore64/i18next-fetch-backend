@@ -1,22 +1,23 @@
 import babel from '@rollup/plugin-babel';
-import pkg from './package.json';
 
 const input = 'src/index.js';
-const plugins = [babel()];
+const plugins = [babel({ babelHelpers: 'bundled' })];
 
 const name = 'I18nextFetchBackend';
 
 export default [{
   input,
   // sourcemaps help generate coverage reports for the actual sources using istanbul
-  output: { file: `dist/${pkg.name}.cjs.js`, format: 'cjs', sourcemap: true },
+  output: {
+    file: 'dist/cjs/index.js', format: 'cjs', sourcemap: true, exports: 'default',
+  },
   plugins,
 }, {
   input,
-  output: { file: `dist/${pkg.name}.esm.js`, format: 'esm' },
+  output: { file: 'dist/mjs/index.js', format: 'esm' },
   plugins,
 }, {
   input,
-  output: { file: `dist/${pkg.name}.umd.js`, format: 'umd', name },
+  output: { file: 'dist/umd/index.js', format: 'umd', name },
   plugins,
 }];

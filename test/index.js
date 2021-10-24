@@ -1,14 +1,16 @@
 import { createServer } from 'http';
-import { join } from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
+import i18next from 'i18next';
 import { expect } from 'chai';
 
-import FetchBackend from '..';
+import FetchBackend from '../src';
 
-const { createInstance } = require('i18next');
+const { createInstance } = i18next; // TODO: use named exports when available
 
-const serve = serveStatic(join(__dirname, 'locales'));
+const serve = serveStatic(join(dirname(fileURLToPath(import.meta.url)), 'locales'));
 const server = createServer((req, res) => {
   serve(req, res, finalhandler(req, res));
 });
@@ -82,7 +84,6 @@ describe('i18next-fetch-backend', () => {
       },
     );
   });
-
 
   it("should fail if the requested domain doesn't exist", (cb) => {
     const i18next = createInstance();

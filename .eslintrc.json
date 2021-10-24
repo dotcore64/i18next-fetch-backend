@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb-base"],
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "max-classes-per-file": 0
+  },
+  "overrides": [
+    {
+      "files": ["test/{,**}/*.js"],
+      "extends": ["plugin:mocha/recommended"],
+      "plugins": ["mocha"],
+      "env": {
+        "mocha": true
+      },
+      "rules": {
+        "mocha/no-mocha-arrows": 0
+      }
+    }
+  ]
+}

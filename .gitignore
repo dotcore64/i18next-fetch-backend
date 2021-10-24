@@ -1,3 +1,6 @@
-dist
+dist/*
+!dist/cjs
+dist/cjs/*
+!dist/cjs/package.json
 node_modules
 .nyc_output
