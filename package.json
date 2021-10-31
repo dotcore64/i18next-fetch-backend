@@ -16,7 +16,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint 'src/**/*.js' 'test/**/*.js'",
+    "lint": "eslint --cache .",
     "build": "rollup -c",
     "cover": "c8 npm test",
     "prepare": "npm run build"
