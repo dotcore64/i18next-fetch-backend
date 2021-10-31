@@ -1,4 +1,4 @@
-import { BackendModule, Services, ReadCallback, InitOptions } from 'i18next';
+import { BackendModule, Services, ReadCallback, MultiReadCallback, InitOptions } from 'i18next';
 
 export interface FetchOptions {
   loadPath: string,
@@ -24,5 +24,5 @@ export default class Backend implements BackendModule<FetchOptions> {
   /**
    * @throws {BackendError} - If the fetch fails or the parsing the response to json fails.
    */
-  readMulti(languages: string[], namespaces: string[], callback: ReadCallback): void;
+  readMulti(languages: string[], namespaces: string[], callback: MultiReadCallback): void;
 }
