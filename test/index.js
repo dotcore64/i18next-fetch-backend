@@ -6,7 +6,9 @@ import serveStatic from 'serve-static';
 import I18next from 'i18next';
 import { expect } from 'chai';
 
-import FetchBackend from '../src';
+// https://github.com/import-js/eslint-plugin-import/issues/1649
+// eslint-disable-next-line import/no-unresolved
+import FetchBackend from 'i18next-fetch-backend';
 
 const { createInstance } = I18next; // TODO: use named exports when available
 

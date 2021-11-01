@@ -9,15 +9,26 @@ export default [{
   input,
   // sourcemaps help generate coverage reports for the actual sources using istanbul
   output: {
-    file: 'dist/cjs/index.js', format: 'cjs', sourcemap: true, exports: 'default',
+    file: 'dist/cjs/index.js',
+    format: 'cjs',
+    sourcemap: true,
+    exports: 'default',
   },
   plugins,
 }, {
   input,
-  output: { file: 'dist/mjs/index.js', format: 'esm' },
+  output: {
+    file: 'dist/mjs/index.js',
+    format: 'esm',
+    sourcemap: true,
+  },
   plugins,
 }, {
   input,
-  output: { file: 'dist/umd/index.js', format: 'umd', name },
+  output: {
+    file: 'dist/umd/index.js',
+    format: 'umd',
+    name,
+  },
   plugins,
 }];

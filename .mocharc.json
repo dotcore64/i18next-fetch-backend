@@ -1,6 +1,5 @@
 {
   "reporter": "spec",
   "ui": "bdd",
-  "experimental-specifier-resolution": "node",
-  "require": ["env-test", "isomorphic-fetch"]
+  "require": ["isomorphic-fetch"]
 }
