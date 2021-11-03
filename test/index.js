@@ -1,6 +1,6 @@
 import { createServer } from 'http';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
+import { join } from 'path';
+import { dirname } from 'dirname-filename-esm';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
 import I18next from 'i18next';
@@ -12,7 +12,7 @@ import FetchBackend from 'i18next-fetch-backend';
 
 const { createInstance } = I18next; // TODO: use named exports when available
 
-const serve = serveStatic(join(dirname(fileURLToPath(import.meta.url)), 'locales'));
+const serve = serveStatic(join(dirname(import.meta), 'locales'));
 const server = createServer((req, res) => {
   serve(req, res, finalhandler(req, res));
 });
