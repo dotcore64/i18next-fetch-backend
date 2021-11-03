@@ -27,9 +27,9 @@ class Backend {
     this.init(services, options);
   }
 
-  type = 'backend'
+  type = 'backend';
 
-  static type = 'backend'
+  static type = 'backend';
 
   init(services, options = {}) {
     this.services = services;
