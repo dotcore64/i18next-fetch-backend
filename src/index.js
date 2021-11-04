@@ -22,7 +22,7 @@ class BackendError extends Error {
   }
 }
 
-class Backend {
+export default class Backend {
   constructor(services, options) {
     this.init(services, options);
   }
@@ -122,5 +122,3 @@ class Backend {
     });
   }
 }
-
-export default Backend;

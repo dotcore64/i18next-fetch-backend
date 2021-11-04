@@ -1,5 +1,7 @@
 import { createServer } from 'http';
 import { join } from 'path';
+import { createRequire } from 'module';
+
 import { dirname } from 'dirname-filename-esm';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
@@ -126,5 +128,10 @@ describe('i18next-fetch-backend', () => {
 
         cb();
       });
+  });
+
+  it('should require cjs module', () => {
+    const require = createRequire(import.meta.url);
+    expect(require('..')).to.be.a('function').and.have.property('type').equal('backend');
   });
 });
