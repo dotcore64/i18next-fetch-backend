@@ -136,7 +136,7 @@ self.addEventListener('activate', (event) => {
 ```
 
 [build-badge]: https://img.shields.io/github/workflow/status/dotcore64/i18next-fetch-backend/test/master?style=flat-square
-[build]: https://travis-ci.org/dotcore64/i18next-fetch-backend
+[build]: https://github.com/dotcore64/i18next-fetch-backend/actions
 
 [npm-badge]: https://img.shields.io/npm/v/i18next-fetch-backend.svg?style=flat-square
 [npm]: https://www.npmjs.org/package/i18next-fetch-backend
