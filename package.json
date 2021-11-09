@@ -46,7 +46,7 @@
     "c8": "^7.10.0",
     "chai": "^4.3.4",
     "dirname-filename-esm": "^1.1.1",
-    "eslint": "^8.1.0",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-mocha": "^9.0.0",
