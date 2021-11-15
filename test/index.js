@@ -5,14 +5,12 @@ import { createRequire } from 'module';
 import { dirname } from 'dirname-filename-esm';
 import finalhandler from 'finalhandler';
 import serveStatic from 'serve-static';
-import I18next from 'i18next';
+import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
 // https://github.com/import-js/eslint-plugin-import/issues/1649
 // eslint-disable-next-line import/no-unresolved
 import FetchBackend from 'i18next-fetch-backend';
-
-const { createInstance } = I18next; // TODO: use named exports when available
 
 const serve = serveStatic(join(dirname(import.meta), 'locales'));
 const server = createServer((req, res) => {
