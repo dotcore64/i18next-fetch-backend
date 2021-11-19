@@ -10,7 +10,8 @@
       "require": "./dist/cjs/index.js",
       "umd": "./dist/umd/index.js",
       "types": "./index.d.ts"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "type": "module",
   "typings": "./index.d.ts",
