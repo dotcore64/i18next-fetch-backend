@@ -52,7 +52,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-mocha": "^10.0.3",
     "finalhandler": "^1.1.2",
-    "i18next": "^21.6.10",
+    "i18next": "^21.6.11",
     "isomorphic-fetch": "^3.0.0",
     "mocha": "^9.2.0",
     "rollup": "^2.67.0",
