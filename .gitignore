@@ -1,10 +1,4 @@
-dist/*
-!dist/cjs
-dist/cjs/*
-!dist/cjs/package.json
-!dist/umd
-dist/umd/*
-!dist/umd/package.json
+dist
 node_modules
 coverage
 .eslintcache
