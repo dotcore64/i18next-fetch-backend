@@ -1,6 +1,6 @@
 {
   "name": "i18next-fetch-backend",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "backend layer for i18next using browsers fetch",
   "main": "dist/cjs/index.cjs",
   "module": "dist/mjs/index.js",
