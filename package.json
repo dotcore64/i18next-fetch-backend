@@ -55,7 +55,7 @@
     "i18next": "^21.8.1",
     "isomorphic-fetch": "^3.0.0",
     "mocha": "^10.0.0",
-    "rollup": "^2.72.1",
+    "rollup": "^2.73.0",
     "serve-static": "^1.15.0"
   }
 }
