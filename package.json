@@ -44,7 +44,7 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@rollup/plugin-babel": "^5.3.1",
-    "c8": "^7.11.2",
+    "c8": "^7.11.3",
     "chai": "^4.3.6",
     "dirname-filename-esm": "^1.1.1",
     "eslint": "^8.15.0",
