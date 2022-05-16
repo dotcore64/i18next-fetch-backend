@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/dotcore64/i18next-fetch-backend#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.10",
     "@rollup/plugin-babel": "^5.3.1",
     "c8": "^7.11.2",
