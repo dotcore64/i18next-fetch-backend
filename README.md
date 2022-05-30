@@ -3,8 +3,6 @@
 [![Build Status][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coverage Status][coveralls-badge]][coveralls]
-[![Dependency Status][dependency-status-badge]][dependency-status]
-[![devDependency Status][dev-dependency-status-badge]][dev-dependency-status]
 
 This is a simple i18next backend to be used in the browser. It will load resources from a backend server using the [fetch](https://developer.mozilla.org/en/docs/Web/API/Fetch_API) API.
 
@@ -143,9 +141,3 @@ self.addEventListener('activate', (event) => {
 
 [coveralls-badge]: https://img.shields.io/coveralls/dotcore64/i18next-fetch-backend/master.svg?style=flat-square
 [coveralls]: https://coveralls.io/r/dotcore64/i18next-fetch-backend
-
-[dependency-status-badge]: https://david-dm.org/dotcore64/i18next-fetch-backend.svg?style=flat-square
-[dependency-status]: https://david-dm.org/dotcore64/i18next-fetch-backend
-
-[dev-dependency-status-badge]: https://david-dm.org/dotcore64/i18next-fetch-backend/dev-status.svg?style=flat-square
-[dev-dependency-status]: https://david-dm.org/dotcore64/i18next-fetch-backend#info=devDependencies
