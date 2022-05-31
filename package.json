@@ -50,7 +50,7 @@
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-mocha": "^10.0.4",
+    "eslint-plugin-mocha": "^10.0.5",
     "finalhandler": "^1.2.0",
     "i18next": "^21.8.4",
     "isomorphic-fetch": "^3.0.0",
