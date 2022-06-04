@@ -1,4 +1,4 @@
 index.d.ts
 node_modules/
 coverage/
-dist/**/*.js
+dist/

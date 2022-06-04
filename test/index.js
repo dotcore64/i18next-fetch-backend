@@ -1,6 +1,6 @@
-import { createServer } from 'http';
-import { join } from 'path';
-import { createRequire } from 'module';
+import { createServer } from 'node:http';
+import { join } from 'node:path';
+import { createRequire } from 'node:module';
 
 import { dirname } from 'dirname-filename-esm';
 import finalhandler from 'finalhandler';
@@ -9,7 +9,7 @@ import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
 // https://github.com/import-js/eslint-plugin-import/issues/1649
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved,n/no-missing-import
 import FetchBackend from 'i18next-fetch-backend';
 
 const serve = serveStatic(join(dirname(import.meta), 'locales'));

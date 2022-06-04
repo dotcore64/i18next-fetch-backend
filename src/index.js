@@ -84,7 +84,7 @@ export default class Backend {
       .then((data) => {
         try {
           return callback(null, parse(data, url));
-        } catch (e) {
+        } catch {
           throw new BackendError(`failed parsing ${url} to json`, false);
         }
       })
@@ -116,8 +116,8 @@ export default class Backend {
           body: stringify(payload),
           ...requestOptions,
         });
-      } catch (ex) {
-        console.error(ex); // eslint-disable-line no-console
+      } catch (e) {
+        console.error(e); // eslint-disable-line no-console
       }
     });
   }
