@@ -1,7 +1,4 @@
-import babel from '@rollup/plugin-babel';
-
 const input = 'src/index.js';
-const plugins = [babel({ babelHelpers: 'bundled' })];
 
 const name = 'I18nextFetchBackend';
 
@@ -14,7 +11,6 @@ export default [{
     sourcemap: true,
     exports: 'default',
   },
-  plugins,
 }, {
   input,
   output: {
@@ -22,7 +18,6 @@ export default [{
     format: 'esm',
     sourcemap: true,
   },
-  plugins,
 }, {
   input,
   output: {
@@ -30,5 +25,4 @@ export default [{
     format: 'umd',
     name,
   },
-  plugins,
 }];

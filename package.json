@@ -2,18 +2,18 @@
   "name": "i18next-fetch-backend",
   "version": "4.1.2",
   "description": "backend layer for i18next using browsers fetch",
+  "type": "module",
   "main": "dist/cjs/index.cjs",
   "module": "dist/mjs/index.js",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./dist/mjs/index.js",
       "require": "./dist/cjs/index.cjs",
-      "umd": "./dist/umd/index.js",
-      "types": "./index.d.ts"
+      "umd": "./dist/umd/index.js"
     },
     "./package.json": "./package.json"
   },
-  "type": "module",
   "typings": "./index.d.ts",
   "scripts": {
     "test": "mocha",
@@ -41,9 +41,6 @@
   },
   "homepage": "https://github.com/dotcore64/i18next-fetch-backend#readme",
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@rollup/plugin-babel": "^5.3.1",
     "c8": "^7.11.3",
     "chai": "^4.3.6",
     "dirname-filename-esm": "^1.1.1",
