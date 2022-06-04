@@ -1,6 +1,5 @@
 import { createServer } from 'node:http';
 import { join } from 'node:path';
-import { createRequire } from 'node:module';
 
 import { dirname } from 'dirname-filename-esm';
 import finalhandler from 'finalhandler';
@@ -9,7 +8,7 @@ import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
 // https://github.com/import-js/eslint-plugin-import/issues/1649
-// eslint-disable-next-line import/no-unresolved,n/no-missing-import
+// eslint-disable-next-line import/no-unresolved,n/no-extraneous-import
 import FetchBackend from 'i18next-fetch-backend';
 
 const serve = serveStatic(join(dirname(import.meta), 'locales'));
@@ -126,10 +125,5 @@ describe('i18next-fetch-backend', () => {
 
         cb();
       });
-  });
-
-  it('should require cjs module', () => {
-    const require = createRequire(import.meta.url);
-    expect(require('..')).to.be.a('function').and.have.property('type').equal('backend');
   });
 });

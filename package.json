@@ -6,14 +6,10 @@
     "node": ">=14"
   },
   "type": "module",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/mjs/index.js",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "import": "./dist/mjs/index.js",
-      "require": "./dist/cjs/index.cjs",
-      "umd": "./dist/umd/index.js"
+      "import": "./index.js"
     },
     "./package.json": "./package.json"
   },
@@ -21,12 +17,10 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint --cache .",
-    "build": "rollup -c",
-    "cover": "c8 npm test",
-    "prepare": "npm run build"
+    "cover": "c8 npm test"
   },
   "files": [
-    "dist",
+    "index.js",
     "index.d.ts"
   ],
   "repository": {
@@ -58,7 +52,6 @@
     "i18next": "^21.8.5",
     "isomorphic-fetch": "^3.0.0",
     "mocha": "^10.0.0",
-    "rollup": "^2.75.3",
     "serve-static": "^1.15.0"
   }
 }
