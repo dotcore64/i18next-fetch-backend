@@ -5,7 +5,6 @@ const defaults = {
   allowMultiLoading: false,
   parse: JSON.parse,
   stringify: JSON.stringify,
-  fetch,
   requestOptions: {},
 };
 
@@ -35,6 +34,7 @@ export default class Backend {
     this.services = services;
 
     this.options = {
+      fetch: typeof fetch !== 'undefined' ? fetch : undefined,
       ...defaults,
       ...this.options,
       ...options,
