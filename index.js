@@ -3,7 +3,7 @@ const defaults = {
   addPath: '/locales/add/{{lng}}/{{ns}}',
   multiSeparator: '+',
   allowMultiLoading: false,
-  fetch: typeof fetch !== 'undefined' ? fetch : undefined,
+  fetch: typeof fetch === 'undefined' ? undefined : fetch,
   parse: JSON.parse,
   stringify: JSON.stringify,
   requestOptions: {},
