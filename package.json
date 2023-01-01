@@ -46,7 +46,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
-    "eslint-plugin-n": "^15.5.1",
+    "eslint-plugin-n": "^15.6.0",
     "eslint-plugin-unicorn": "^45.0.2",
     "finalhandler": "^1.2.0",
     "i18next": "^22.4.6",
