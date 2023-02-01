@@ -8,7 +8,7 @@ import { createInstance } from 'i18next';
 import { expect } from 'chai';
 
 // https://github.com/import-js/eslint-plugin-import/issues/1649
-// eslint-disable-next-line import/no-unresolved,n/no-extraneous-import
+// eslint-disable-next-line import/no-unresolved
 import FetchBackend from 'i18next-fetch-backend';
 
 const serve = serveStatic(join(dirname(import.meta), 'locales'));
