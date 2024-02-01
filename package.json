@@ -39,7 +39,7 @@
   "homepage": "https://github.com/dotcore64/i18next-fetch-backend#readme",
   "devDependencies": {
     "c8": "^8.0.1",
-    "chai": "^5.0.0",
+    "chai": "^5.0.3",
     "dirname-filename-esm": "^1.1.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
