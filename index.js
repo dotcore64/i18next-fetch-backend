@@ -3,6 +3,7 @@ const defaults = {
   addPath: '/locales/add/{{lng}}/{{ns}}',
   multiSeparator: '+',
   allowMultiLoading: false,
+  // eslint-disable-next-line n/no-unsupported-features/node-builtins
   fetch: typeof fetch === 'undefined' ? undefined : fetch,
   parse: JSON.parse,
   stringify: JSON.stringify,
