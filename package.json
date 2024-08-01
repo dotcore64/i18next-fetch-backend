@@ -47,7 +47,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-mocha": "^10.5.0",
     "eslint-plugin-n": "^17.10.1",
-    "eslint-plugin-unicorn": "^54.0.0",
+    "eslint-plugin-unicorn": "^55.0.0",
     "finalhandler": "^1.2.0",
     "i18next": "^23.12.2",
     "isomorphic-fetch": "^3.0.0",
