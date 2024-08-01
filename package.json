@@ -41,7 +41,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
     "c8": "^10.1.2",
     "chai": "^5.1.1",
-    "dirname-filename-esm": "^1.1.1",
+    "dirname-filename-esm": "^1.1.2",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
