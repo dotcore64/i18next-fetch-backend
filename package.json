@@ -39,7 +39,7 @@
   "homepage": "https://github.com/dotcore64/i18next-fetch-backend#readme",
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "c8": "^10.1.2",
+    "c8": "^10.1.3",
     "chai": "^5.1.2",
     "dirname-filename-esm": "^1.1.2",
     "eslint": "^8.57.0",
