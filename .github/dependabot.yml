@@ -6,10 +6,6 @@ updates:
       schedule:
           interval: monthly
       open-pull-requests-limit: 20
-      reviewers:
-          - perrin4869
-      assignees:
-          - perrin4869
     - package-ecosystem: github-actions
       directory: /
       schedule:
