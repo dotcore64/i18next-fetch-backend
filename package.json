@@ -51,7 +51,7 @@
     "finalhandler": "^2.1.0",
     "i18next": "^25.5.3",
     "isomorphic-fetch": "^3.0.0",
-    "mocha": "^11.7.3",
+    "mocha": "^11.7.4",
     "serve-static": "^2.2.0"
   }
 }
