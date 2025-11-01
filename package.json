@@ -1,6 +1,6 @@
 {
   "name": "i18next-fetch-backend",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "backend layer for i18next using browsers fetch",
   "engines": {
     "node": ">=20"
