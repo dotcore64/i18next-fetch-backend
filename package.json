@@ -49,7 +49,7 @@
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-unicorn": "^56.0.1",
     "finalhandler": "^2.1.1",
-    "i18next": "^25.6.0",
+    "i18next": "^25.7.1",
     "isomorphic-fetch": "^3.0.0",
     "mocha": "^11.7.5",
     "serve-static": "^2.2.0"
