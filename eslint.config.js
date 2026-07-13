@@ -39,6 +39,7 @@ export default [
     files: testFiles,
     rules: {
       "mocha/no-mocha-arrows": "off",
+      "mocha/handle-done-callback": "off",
     },
   },
   {

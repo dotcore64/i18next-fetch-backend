@@ -25,7 +25,7 @@ describe("i18next-fetch-backend", () => {
     server.close();
   });
 
-  it("should load english translation namespace", (cb) => {
+  it("should load english translation namespace", (_, cb) => {
     const i18next = createInstance();
 
     i18next.use(FetchBackend).init(
@@ -45,7 +45,7 @@ describe("i18next-fetch-backend", () => {
     );
   });
 
-  it("should fail to load non existent language translation", (cb) => {
+  it("should fail to load non existent language translation", (_, cb) => {
     const i18next = createInstance();
 
     i18next.use(FetchBackend).init(
@@ -66,7 +66,7 @@ describe("i18next-fetch-backend", () => {
     );
   });
 
-  it("should fail to load non existent namespace translation", (cb) => {
+  it("should fail to load non existent namespace translation", (_, cb) => {
     const i18next = createInstance();
 
     i18next.use(FetchBackend).init(
@@ -86,7 +86,7 @@ describe("i18next-fetch-backend", () => {
     );
   });
 
-  it("should fail if the requested domain doesn't exist", (cb) => {
+  it("should fail if the requested domain doesn't exist", (_, cb) => {
     const i18next = createInstance();
 
     i18next.use(FetchBackend).init(
@@ -107,7 +107,7 @@ describe("i18next-fetch-backend", () => {
     );
   });
 
-  it("should call the callback with an error if the fetch fails.", (cb) => {
+  it("should call the callback with an error if the fetch fails.", (_, cb) => {
     const i18next = createInstance();
 
     i18next.use(FetchBackend).init(
