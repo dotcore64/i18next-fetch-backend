@@ -1,7 +1,6 @@
 import { createServer } from "node:http";
 import { join } from "node:path";
 
-import { dirname } from "dirname-filename-esm";
 import finalhandler from "finalhandler";
 import serveStatic from "serve-static";
 import { createInstance } from "i18next";
@@ -11,7 +10,8 @@ import { expect } from "chai";
 
 import FetchBackend from "i18next-fetch-backend";
 
-const serve = serveStatic(join(dirname(import.meta), "locales"));
+// eslint-disable-next-line n/no-unsupported-features/node-builtins
+const serve = serveStatic(join(import.meta.dirname, "locales"));
 const server = createServer((req, res) => {
   serve(req, res, finalhandler(req, res));
 });
