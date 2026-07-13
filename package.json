@@ -3,7 +3,7 @@
   "version": "7.0.0",
   "description": "backend layer for i18next using browsers fetch",
   "engines": {
-    "node": "^20.13.0 || >=22.0.0"
+    "node": ">=22.0.0"
   },
   "type": "module",
   "exports": {
