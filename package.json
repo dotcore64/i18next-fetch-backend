@@ -45,6 +45,7 @@
     "dirname-filename-esm": "^1.1.2",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-mocha": "^11.3.0",
     "eslint-plugin-n": "^18.2.2",
@@ -55,6 +56,8 @@
     "isomorphic-fetch": "^3.0.0",
     "mocha": "^11.7.6",
     "prettier": "3.9.5",
-    "serve-static": "^2.2.1"
+    "serve-static": "^2.2.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.63.0"
   }
 }

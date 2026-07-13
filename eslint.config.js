@@ -3,7 +3,8 @@ import node from "eslint-plugin-n";
 import mocha from "eslint-plugin-mocha";
 import imprt from "eslint-plugin-import";
 import unicorn from "eslint-plugin-unicorn";
-import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import { configs as typescript } from "typescript-eslint";
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs"; // eslint-disable-line import/default
 import prettier from "eslint-plugin-prettier/recommended";
 
 const testFiles = ["test/{,**/}*.js"];
@@ -11,9 +12,10 @@ const testFiles = ["test/{,**/}*.js"];
 export default [
   js.configs.recommended,
   node.configs["flat/recommended-script"],
-  comments.recommended,
+  comments.recommended, // eslint-disable-line import/no-named-as-default-member
   unicorn.configs.recommended,
   imprt.flatConfigs.recommended,
+  ...typescript.recommended,
   prettier,
   {
     languageOptions: {
@@ -40,6 +42,18 @@ export default [
     },
   },
   {
-    ignores: ["coverage/", "node_modules/", "index.d.ts"],
+    ignores: ["coverage/", "node_modules/"],
+  },
+  {
+    settings: {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts"],
+      },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+    },
   },
 ];
