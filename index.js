@@ -1,17 +1,18 @@
 const defaults = {
-  loadPath: '/locales/{{lng}}/{{ns}}.json',
-  addPath: '/locales/add/{{lng}}/{{ns}}',
-  multiSeparator: '+',
+  loadPath: "/locales/{{lng}}/{{ns}}.json",
+  addPath: "/locales/add/{{lng}}/{{ns}}",
+  multiSeparator: "+",
   allowMultiLoading: false,
   // eslint-disable-next-line n/no-unsupported-features/node-builtins
-  fetch: typeof fetch === 'undefined' ? undefined : fetch,
+  fetch: typeof fetch === "undefined" ? undefined : fetch,
   parse: JSON.parse,
   stringify: JSON.stringify,
   requestOptions: {},
 };
 
 const arrify = (val) => (Array.isArray(val) ? val : [val]);
-const normalize = (funcOrVal, ...args) => (typeof funcOrVal === 'function' ? funcOrVal(...args) : funcOrVal);
+const normalize = (funcOrVal, ...args) =>
+  typeof funcOrVal === "function" ? funcOrVal(...args) : funcOrVal;
 
 class BackendError extends Error {
   retry = null;
@@ -28,9 +29,9 @@ export default class Backend {
     this.init(services, options);
   }
 
-  type = 'backend';
+  type = "backend";
 
-  static type = 'backend';
+  static type = "backend";
 
   init(services, options = {}) {
     this.services = services;
@@ -48,7 +49,10 @@ export default class Backend {
 
   read(language, namespace, callback) {
     const loadPath = this.getLoadPath(language, namespace);
-    const url = this.services.interpolator.interpolate(loadPath, { lng: language, ns: namespace });
+    const url = this.services.interpolator.interpolate(loadPath, {
+      lng: language,
+      ns: namespace,
+    });
 
     this.loadUrl(url, callback);
   }
@@ -69,19 +73,22 @@ export default class Backend {
     const { fetch, requestOptions, parse } = this.options;
 
     fetch(url, requestOptions)
-      .then((response) => {
-        const { ok, status } = response;
+      .then(
+        (response) => {
+          const { ok, status } = response;
 
-        if (!ok) {
-          const retry = status >= 500 && status < 600; // don't retry for 4xx codes
+          if (!ok) {
+            const retry = status >= 500 && status < 600; // don't retry for 4xx codes
 
-          throw new BackendError(`failed loading ${url}`, retry);
-        }
+            throw new BackendError(`failed loading ${url}`, retry);
+          }
 
-        return response.text();
-      }, () => {
-        throw new BackendError(`failed loading ${url}`);
-      })
+          return response.text();
+        },
+        () => {
+          throw new BackendError(`failed loading ${url}`);
+        },
+      )
       .then((data) => {
         try {
           return callback(null, parse(data, url));
@@ -98,27 +105,25 @@ export default class Backend {
 
   create(languages, namespace, key, fallbackValue) {
     const payload = {
-      [key]: fallbackValue || '',
+      [key]: fallbackValue || "",
     };
 
     arrify(languages).forEach((lng) => {
-      const {
-        addPath,
-        requestOptions,
-        fetch,
-        stringify,
-      } = this.options;
+      const { addPath, requestOptions, fetch, stringify } = this.options;
 
-      const url = this.services.interpolator.interpolate(addPath, { lng, ns: namespace });
+      const url = this.services.interpolator.interpolate(addPath, {
+        lng,
+        ns: namespace,
+      });
 
       try {
         fetch(url, {
-          method: 'POST',
+          method: "POST",
           body: stringify(payload),
           ...requestOptions,
         });
       } catch (e) {
-        console.error(e);  
+        console.error(e);
       }
     });
   }
