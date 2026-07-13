@@ -118,7 +118,7 @@ export default class Backend {
           ...requestOptions,
         });
       } catch (e) {
-        console.error(e); // eslint-disable-line no-console
+        console.error(e);  
       }
     });
   }
