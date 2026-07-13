@@ -1,22 +1,37 @@
-import { BackendModule, Services, ReadCallback, MultiReadCallback, InitOptions } from 'i18next';
+import {
+  BackendModule,
+  Services,
+  ReadCallback,
+  MultiReadCallback,
+  InitOptions,
+} from "i18next"; // eslint-disable-line n/no-unpublished-import
 
 export interface FetchOptions {
-  loadPath: string,
-  addPath: string,
-  multiSeparator: string,
-  allowMultiLoading: boolean,
-  fetch: typeof fetch,
-  parse: typeof JSON.parse,
-  stringify: typeof JSON.stringify,
-  requestOptions: RequestInit,
+  loadPath: string;
+  addPath: string;
+  multiSeparator: string;
+  allowMultiLoading: boolean;
+  fetch: typeof fetch; // eslint-disable-line n/no-unsupported-features/node-builtins
+  parse: typeof JSON.parse;
+  stringify: typeof JSON.stringify;
+  requestOptions: RequestInit;
 }
-export class BackendError extends Error { }
+export class BackendError extends Error {}
 export default class Backend implements BackendModule<FetchOptions> {
-  type: 'backend';
-  static type: 'backend';
+  type: "backend";
+  static type: "backend";
   constructor(services: Services, options: FetchOptions);
-  init(services: Services, backendOptions: FetchOptions, i18nextOptions: InitOptions): void;
-  create(languages: string[], namespace: string, key: string, fallbackValue: string): void;
+  init(
+    services: Services,
+    backendOptions: FetchOptions,
+    i18nextOptions: InitOptions,
+  ): void;
+  create(
+    languages: string[],
+    namespace: string,
+    key: string,
+    fallbackValue: string,
+  ): void;
   /**
    * @throws {BackendError} - If the fetch fails or the parsing the response to json fails.
    */
@@ -24,5 +39,9 @@ export default class Backend implements BackendModule<FetchOptions> {
   /**
    * @throws {BackendError} - If the fetch fails or the parsing the response to json fails.
    */
-  readMulti(languages: string[], namespaces: string[], callback: MultiReadCallback): void;
+  readMulti(
+    languages: string[],
+    namespaces: string[],
+    callback: MultiReadCallback,
+  ): void;
 }
