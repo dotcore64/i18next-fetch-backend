@@ -3,7 +3,7 @@
   "version": "7.0.0",
   "description": "backend layer for i18next using browsers fetch",
   "engines": {
-    "node": ">=20"
+    "node": "^20.13.0 || >=22.0.0"
   },
   "type": "module",
   "exports": {
@@ -15,7 +15,7 @@
   },
   "typings": "./index.d.ts",
   "scripts": {
-    "test": "mocha",
+    "test": "node --test --import ./test/setup.js ./test/index.js",
     "lint": "eslint --cache .",
     "cover": "c8 npm test"
   },
@@ -52,8 +52,6 @@
     "eslint-plugin-unicorn": "^65.0.1",
     "finalhandler": "^2.1.1",
     "i18next": "^26.3.6",
-    "isomorphic-fetch": "^3.0.0",
-    "mocha": "^11.7.6",
     "prettier": "3.9.5",
     "serve-static": "^2.2.1",
     "typescript": "^6.0.3",
