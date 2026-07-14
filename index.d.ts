@@ -11,7 +11,7 @@ export interface FetchOptions {
   addPath: string;
   multiSeparator: string;
   allowMultiLoading: boolean;
-  fetch: typeof fetch; // eslint-disable-line n/no-unsupported-features/node-builtins
+  fetch: typeof fetch;
   parse: typeof JSON.parse;
   stringify: typeof JSON.stringify;
   requestOptions: RequestInit;
