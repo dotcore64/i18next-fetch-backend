@@ -55,7 +55,7 @@
     "i18next": "^26.3.6",
     "prettier": "3.9.5",
     "serve-static": "^2.2.1",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.64.0"
   }
 }
