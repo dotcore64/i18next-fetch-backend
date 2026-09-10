@@ -52,7 +52,7 @@
     "eslint-plugin-unicorn": "^65.0.1",
     "eslint-plugin-yml": "^3.8.1",
     "finalhandler": "^2.1.1",
-    "i18next": "^26.3.6",
+    "i18next": "^26.4.2",
     "prettier": "3.9.6",
     "serve-static": "^2.2.1",
     "typescript": "^6.0.3",
