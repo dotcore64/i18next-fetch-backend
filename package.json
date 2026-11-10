@@ -50,7 +50,7 @@
     "eslint-plugin-n": "^18.5.0",
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-unicorn": "^65.0.1",
-    "eslint-plugin-yml": "^3.8.1",
+    "eslint-plugin-yml": "^3.10.0",
     "finalhandler": "^2.1.1",
     "i18next": "^26.7.2",
     "prettier": "3.9.10",
