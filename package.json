@@ -49,7 +49,7 @@
     "eslint-plugin-mocha": "^11.3.0",
     "eslint-plugin-n": "^18.5.0",
     "eslint-plugin-prettier": "^5.5.7",
-    "eslint-plugin-unicorn": "^65.0.1",
+    "eslint-plugin-unicorn": "^79.0.0",
     "eslint-plugin-yml": "^3.10.0",
     "finalhandler": "^2.1.1",
     "i18next": "^26.7.2",
